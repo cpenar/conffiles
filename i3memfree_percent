@@ -1,0 +1,8 @@
+i3status | while :
+do
+  read line
+  memusable=$(free |grep 'cache:' |tr -s ' '|cut -f4 -d' ')
+  memtot=$(free |grep '^Mem'|tr -s ' '|cut -f2 -d' ')
+  
+  echo  "$line | "$((memusable*100/memtot))"%" free
+done
