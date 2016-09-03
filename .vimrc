@@ -16,7 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 "Plugin 'powerline/powerline' "Installed from pip3 not vundle
-
+Plugin 'kchmck/vim-coffee-script'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
