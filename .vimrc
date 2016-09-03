@@ -24,5 +24,5 @@ filetype plugin indent on    " required
 
 
 
-
+set hlsearch
 syntax on
