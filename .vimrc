@@ -23,6 +23,16 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
+" powerline activation
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+" and configuration
+set laststatus=2 "ensure that powerline shows up even if you dont have any split
+set t_Co=256
+set noshowmode
+set showtabline=1
+
 
 set hlsearch
 syntax on
