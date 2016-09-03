@@ -15,7 +15,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-Plugin 'powerline/powerline'
+"Plugin 'powerline/powerline' "Installed from pip3 not vundle
 
 
 " All of your Plugins must be added before the following line
