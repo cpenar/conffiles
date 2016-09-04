@@ -20,6 +20,7 @@ Plugin 'kchmck/vim-coffee-script'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+syntax enable
 filetype plugin indent on    " required
 
 
@@ -33,6 +34,10 @@ set t_Co=256
 set noshowmode
 set showtabline=1
 
+" vim-coffee-script conf
+let coffee_watch_vert = 1
+
 
 set hlsearch
 syntax on
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
