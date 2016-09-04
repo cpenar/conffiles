@@ -56,7 +56,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
