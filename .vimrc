@@ -37,7 +37,9 @@ set showtabline=1
 " vim-coffee-script conf
 let coffee_watch_vert = 1
 
-
+" highlighting search and cancel with space
 set hlsearch
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
 syntax on
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
