@@ -15,8 +15,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-"Plugin 'powerline/powerline' "Installed from pip3 not vundle
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,6 +36,10 @@ set showtabline=1
 
 " vim-coffee-script conf
 let coffee_watch_vert = 1
+" nerdtree conf
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
 
 " highlighting search and cancel with space
 set hlsearch
