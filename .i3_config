@@ -168,7 +168,9 @@ bar {
 font pango:DejaVu Sans Mono 6
 #new_window none
 hide_edge_borders both
-#client.focused_inactive #333333 #333333 #ffffff #484e50
+client.focused            #395768 #395768 #000000 #484e50
+client.unfocused          #333333 #222222 #888888 #292d2e   
+client.focused_inactive   #333333 #222222 #888888 #292d2e   
 
 exec --no-startup-id i3-msg 'workspace 3; exec i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
