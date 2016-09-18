@@ -28,9 +28,9 @@ filetype plugin indent on    " required
 
 
 " powerline activation
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 " and configuration
 set laststatus=2 "ensure that powerline shows up even if you dont have any split
 set t_Co=256
