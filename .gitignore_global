@@ -48,3 +48,9 @@ Thumbs.db
 *.pyc
 *~
 *.swp
+
+# gitignore itself #
+.gitignore
+
+# jekyll _site subdir #
+_site
