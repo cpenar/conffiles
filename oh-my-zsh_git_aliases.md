@@ -1,15 +1,9 @@
 alias g='git'
-
 alias ga='git add'
-
-alias gaa='git add --all'
-
+###alias gaa='git add --all'
 alias gapa='git add --patch'
-
-alias gb='git branch'
-
+###alias gb='git branch'
 alias gba='git branch -a'
-
 alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
 
 alias gbl='git blame -b -w'
@@ -42,7 +36,7 @@ alias gcan!='git commit -v -a --no-edit --amend'
 
 alias gcans!='git commit -v -a -s --no-edit --amend'
 
-alias gcam='git commit -a -m'
+###alias gcam='git commit -a -m'
 
 alias gcb='git checkout -b'
 
@@ -72,7 +66,7 @@ alias gcpc='git cherry-pick --continue'
 
 alias gcs='git commit -S'
 
-alias gd='git diff'
+###alias gd='git diff'
 
 alias gdca='git diff --cached'
 
@@ -112,7 +106,7 @@ alias gk='\gitk --all --branches'
 
 alias gke='\gitk --all $(git log -g --pretty=format:%h)'
 
-alias gl='git pull'
+##alias gl='git pull'
 
 alias glg='git log --stat'
 
@@ -126,7 +120,7 @@ alias glgm='git log --graph --max-count=10'
 
 alias glo='git log --oneline --decorate'
 
-alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+###alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 alias glola="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
 
@@ -146,7 +140,7 @@ alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
 
 alias gmum='git merge upstream/master'
 
-alias gp='git push'
+###alias gp='git push'
 
 alias gpd='git push --dry-run'
 
@@ -190,7 +184,7 @@ alias grup='git remote update'
 
 alias grv='git remote -v'
 
-alias gsb='git status -sb'
+###alias gsb='git status -sb'
 
 alias gsd='git svn dcommit'
 
@@ -202,7 +196,7 @@ alias gsr='git svn rebase'
 
 alias gss='git status -s'
 
-alias gst='git status'
+###alias gst='git status'
 
 alias gsta='git stash save'
 
@@ -228,7 +222,7 @@ alias gunignore='git update-index --no-assume-unchanged'
 
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
-alias gup='git pull --rebase'
+###alias gup='git pull --rebase'
 
 alias gupv='git pull --rebase -v'
 
