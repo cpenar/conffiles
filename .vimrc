@@ -48,6 +48,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " highlighting search and cancel with space
 set hlsearch
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+hi Search cterm=bold ctermfg=white ctermbg=blue
 
 syntax on
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
