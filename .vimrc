@@ -16,12 +16,14 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'wikitopian/hardmode'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,8 +46,12 @@ let coffee_watch_vert = 1
 " nerdtree conf
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-"hardmode activation
+" hardmode activation
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" ultisnip conf
+let g:UltiSnipsExpandTrigger="²"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 " highlighting search and cancel with space
