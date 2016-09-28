@@ -21,6 +21,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'wikitopian/hardmode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,6 +44,8 @@ let coffee_watch_vert = 1
 " nerdtree conf
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+"hardmode activation
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 
 " highlighting search and cancel with space
