@@ -49,9 +49,11 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " hardmode activation
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 " ultisnip conf
-let g:UltiSnipsExpandTrigger="²"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger = '<Tab>'
+let g:UltiSnipsJumpForwardTrigger = '<Tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 
 " highlighting search and cancel with space
