@@ -172,6 +172,8 @@ client.focused            #395768 #395768 #71D19E #484e50
 client.unfocused          #333333 #222222 #888888 #292d2e   
 client.focused_inactive   #333333 #222222 #888888 #292d2e   
 
+exec --no-startup-id i3-msg 'exec wicd-client'
+exec --no-startup-id i3-msg 'exec gnome-sound-applet'
 exec --no-startup-id i3-msg 'workspace 3; exec i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
 exec --no-startup-id i3-msg 'workspace 1; exec thunderbird'
