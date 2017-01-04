@@ -1,0 +1,196 @@
+" ##########################################################
+" Test from "How to do 90% of what plugins do with just vim"
+" ##########################################################
+
+" ######
+" Vundle
+" ######
+
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" My Plugins
+"Plugin 'Valloric/YouCompleteMe'
+
+" ULTISNIPS
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" SuperTab for both YCM and UltiSnip
+"Plugin 'ervandew/supertab'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Autopairing
+Plugin 'jiangmiao/auto-pairs'
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+Plugin 'luochen1990/rainbow'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" ##########
+" END VUNDLE
+" ##########
+
+let g:rainbow_active = 1
+
+syntax enable
+
+set nu
+" ##############
+" FINDING FILES:
+" ##############
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+
+set path+=**
+
+" Display all matching file when tab completing
+
+set wildmenu
+
+" NOW WE CAN:
+" Hit tab to :find by partial match
+" Use * to make it fuzzy
+
+" THINGS TO CONSIDER
+" :b lets you autocomplete any buffer open
+
+" ###########
+" TAG JUMPING
+" ###########
+
+" Create the 'tags' file (may need to install ctags first)
+command! MakeTags !ctags -R .
+
+" Now we can ^] to jump to tag under cursor
+" Use g^] for ambiguous tags
+" Use ^t to jump back to tag stack
+
+" #################
+" BUILD INTEGRATION
+" #################
+
+" Configure 'make' cmd to run rspec
+
+" set mageprg=bundle\ exec\ rspec\ -f\ QuickfixFormatter
+
+" Now we can
+" Run ':make' to run rspec
+" ':cl' to list errors
+" ':cc#' to jump to error by number
+" ':cn' and ':cp' to navigate forward and backward
+
+" ############
+" USE HELP CMD
+" ############
+
+" :help ^n   to search for ctrl-n key
+" :help i_^  what does ctrl-n in insert mode
+" :helpgrep motif    search for motif in all documentation
+
+
+" ########################
+" FROM help ins-completion
+" ########################
+
+function! CleverTab()
+   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+      return "\<Tab>"
+   else
+      return "\<C-N>"
+   endif
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>
+
+" ##################
+" from DAMIAN CONWAY
+" ##################
+
+" Make the column 80 stand out
+highlight ColorColumn ctermbg=red
+call matchadd ('ColorColumn', '\%80v', 100)
+
+" Highlight match when jumping to next
+
+nnoremap <silent> n n:call HLNext()<CR>
+nnoremap <silent> N N:call HLNext()<CR>
+
+function! HLNext ()
+    set invcursorline
+    redraw
+    exec 'sleep ' . float2nr(50) . 'm'
+    set invcursorline
+    redraw
+    exec 'sleep ' . float2nr(50) . 'm'
+    set invcursorline
+    redraw
+    exec 'sleep ' . float2nr(50) . 'm'
+    set invcursorline
+    redraw
+endfunction
+
+" Shady Characters
+
+exec "set listchars=tab:\uBB\uB7,trail:\uB7"
+set list
+
+" #################################################
+" from MARTIN BROCHHAUS video : Vim as a python IDE
+" #################################################
+
+" Automatic reloadind of .vimrc
+autocmd! bufwritepost .vimrc source %
+
+" Better Copy and Paste
+set pastetoggle=<F2>
+set clipboard=unnamed
+
+" backspace in insert mode
+set bs=2
+
+
+" ######
+" MY OWN
+" ######
+
+" from :help vimrc_example
+set backspace=indent,eol,start
+set autoindent
+set incsearch
+set hlsearch
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Mapping CAPS LOCK to escape
+" uses xmodmap
+" au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+" au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
+
+map Q gq
+
+
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+" for the plaisure
+set showcmd
+
+" MOVEMENT
+" Use e to move to word last char
+" use ( and ) to move threw entire sentence
+" zz to center vertically current line

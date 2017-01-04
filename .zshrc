@@ -84,3 +84,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias l='ls -lahrt'
+
+# ajout path de pycharm
+export PATH="/home/cpenar/nosave/install/pycharm-community-2016.3/bin:$PATH"
+
+# Ajouter par nvm 
+export NVM_DIR="/home/cpenar/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
