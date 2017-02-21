@@ -84,6 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias l='ls -lahrt'
+alias py=python3
+alias rctags='ctags -R --exclude=app.js --exclude=node_modules'
 
 # ajout path de pycharm
 export PATH="/home/cpenar/nosave/install/pycharm-community-2016.3/bin:$PATH"

@@ -183,3 +183,4 @@ bindsym Ctrl+Alt+l i3lock
 
 # MULTI ECRAN
 # xrandr --output BLAHBLAH --auto --left-of eDP1
+# xrandr --ouput DP3 --auto --right-of eDP1
