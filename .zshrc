@@ -83,9 +83,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#docker aliases
+alias doc="docker"
+alias di="docker images"
+alias dps="docker ps -a"
+
 alias l='ls -lahrt'
 alias py=python3
 alias rctags='ctags -R --exclude=app.js --exclude=node_modules'
+alias doc='docker'
+alias e="xdg-open"
 
 # ajout path de pycharm
 export PATH="/home/cpenar/nosave/install/pycharm-community-2016.3/bin:$PATH"
