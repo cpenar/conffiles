@@ -31,9 +31,13 @@ Plugin 'luochen1990/rainbow'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
-
 Plugin 'posva/vim-vue'
 Plugin 'scrooloose/nerdtree'
+" NerdTree Tab plugin
+Plugin 'jistr/vim-nerdtree-tabs'
+
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -149,6 +153,6 @@ function! CleverTab()
 endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
-" NERDTree shortcut toggle
-map <C-p> :NERDTreeToggle<CR>
+" NERDTree-tabs shortcut toggle
+map <C-p> :NERDTreeTabsToggle<CR>
 
