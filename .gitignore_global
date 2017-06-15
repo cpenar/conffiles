@@ -48,8 +48,13 @@ Thumbs.db
 *.pyo
 *.pyc
 *~
+*.*~
 *.swp
 *.swo
+
+# Glade temp files #
+####################
+\#.*\#
 
 # gitignore itself #
 .gitignore
@@ -65,3 +70,7 @@ nohup.out
 node_modules
 sequelize
 .vscode
+
+# Anjuta
+.anjuta_sym_db.db
+.anjuta
