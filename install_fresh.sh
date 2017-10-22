@@ -36,7 +36,7 @@ echo
 
 cd ~/work
 
-git clone https://github.com/cpenar/conffiles
+git clone git@github.com:cpenar/conffiles.git
 
 echo
 echo "######################"
