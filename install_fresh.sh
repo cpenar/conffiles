@@ -9,9 +9,9 @@ if [ $(id -u) -eq 0 ] ; then
 fi
 
 echo
-echo "#########################################"
-echo "# installing packages # debian packages #"
-echo "#########################################"
+echo "######################################"
+echo "# installing packages # debian style #"
+echo "######################################"
 echo
 
 sudo sh -c "apt update -y && apt dist-upgrade -y && apt install -y \
@@ -32,11 +32,25 @@ echo
 echo "# Finished installing oh-my-zsh #"
 echo
 
+
+echo
+echo #####################
+echo # Installing Vundle #
+echo #####################
+echo
+if git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim; then : ; fi
+
 [ ! -d ~/work ] && mkdir ~/work
 
-cd ~/work
+echo
+echo ##########################
+echo # Cloning work/conffiles #
+echo ##########################
+echo
 
-git clone git@github.com:cpenar/conffiles.git
+cd ~/work
+if git clone git@github.com:cpenar/conffiles.git ; then /dev/null ;
+fi
 
 echo
 echo "######################"
@@ -44,13 +58,36 @@ echo "# Linking conf files #"
 echo "######################"
 echo
 
-[ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.before.link
+if [ -f ~/.zshrc ] ; then
+   mv ~/.zshrc ~/.zshrc.pre_install_fresh
+fi
 
-ln -s ~/work/conffiles/.zshrc ~/.zshrc
+cd ~
+ln -s work/conffiles/.zshrc .zshrc
 
 echo
 echo " .zshrc done"
 echo
 
+if [ ! -f .gitignore ] ; then
+   ln -s work/conffiles/.gitignore_global .gitignore
+fi
+
+echo
+echo " .gitignore done"
+echo
+
+if [ ! -f .vimrc ]; then
+   ln -s work/conffiles/.vimrc_ultisnip .vimrc
+fi
+
+echo
+echo " .vimrc done"
+echo
+
+echo
 echo " .i3/config"
 echo " Link i3/config or .config/i3/config to conffiles/i3_config"
+
+echo
+echo Vundle : Launch vim and run :PluginInstall
