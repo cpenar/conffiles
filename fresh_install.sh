@@ -86,8 +86,7 @@ echo " .vimrc done"
 echo
 
 echo
-echo " .i3/config"
-echo " Link i3/config or .config/i3/config to conffiles/i3_config"
+echo " Link conffiles/i3_config to i3/config or .config/i3/config"
 
 echo
 echo Vundle : Launch vim and run :PluginInstall
