@@ -74,3 +74,6 @@ sequelize
 # Anjuta
 .anjuta_sym_db.db
 .anjuta
+
+# Ansible .retry files
+*.retry
