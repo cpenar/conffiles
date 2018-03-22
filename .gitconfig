@@ -2,4 +2,4 @@
 	email = carlos.penaranda74@gmail.com
 	name = Carlos Penaranda
 [core]
-	excludesfile = /home/cpenar/.gitignore_global
+	excludesfile = /home/cpenar/work/conffiles/.gitignore_global
