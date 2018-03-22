@@ -1,3 +1,9 @@
+# First system installation
+
+``` 
+wget https://raw.githubusercontent.com/cpenar/conffiles/master/first_sys_config.sh -O - | sh
+```
+
 # Vundle
 
 cf https://github.com/VundleVim/Vundle.Vim
