@@ -1,0 +1,5 @@
+[user]
+	email = carlos.penaranda74@gmail.com
+	name = Carlos Penaranda
+[core]
+	excludesfile = /home/cpenar/.gitignore_global
