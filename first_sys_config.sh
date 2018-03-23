@@ -24,7 +24,7 @@ if ! [ -f ~/.ssh/id_rsa.pub ]; then
    echo and been able to clone cpenar/ansible repo
    echo
 
-   ssh-keygen -t rsa 4096
+   ssh-keygen -t rsa -b 4096
 
    echo
    echo Please export ~/.ssh/id_rsa.pub to your github acount
