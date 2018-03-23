@@ -35,5 +35,7 @@ fi
 
 git clone git@github.com:cpenar/ansible.git ~/work/ansible
 
+echo 
+echo ####
 echo Run:
 echo "cd ~/work/ansible/my_base && sudo ansible-playbook site.yml"
