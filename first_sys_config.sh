@@ -19,7 +19,7 @@ elif [ -e /etc/arch-release ]; then
 fi
 
 # Required ssh key
-if ! [ -f ~/.ssh/id_rsa.pub ];
+if ! [ -f ~/.ssh/id_rsa.pub ]; then
    echo A ssh key is needed to deploy on github
    echo and been able to clone cpenar/ansible repo
    echo
