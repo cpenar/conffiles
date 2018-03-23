@@ -3,3 +3,4 @@
 	name = Carlos Penaranda
 [core]
 	excludesfile = /home/cpenar/work/conffiles/.gitignore_global
+	editor = vim
