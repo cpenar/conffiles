@@ -5,7 +5,7 @@ packages="git ansible"
 if [ -e /etc/debian-release ]; then
    sudo apt update -y && apt install -y $packages
 elif [ -e /etc/arch-release ]; then
-   sudo pacman -S $packages
+   sudo pacman -S --needed $packages
 fi
 
 git clone git@github.com:cpenar/ansible.git ~/work/ansible
