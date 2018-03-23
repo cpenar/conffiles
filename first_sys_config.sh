@@ -27,7 +27,7 @@ if ! [ -f ~/.ssh/id_rsa.pub ]; then
    ssh-keygen -t rsa -b 4096
 
    echo
-   echo Please export ~/.ssh/id_rsa.pub to your github acount
+   echo Export ~/.ssh/id_rsa.pub to github account
    echo before reruning this script
 
    exit 0
@@ -37,5 +37,12 @@ git clone git@github.com:cpenar/ansible.git ~/work/ansible
 
 echo 
 echo ####
-echo Run:
+echo INFO
+echo ####
+echo
+echo Modify /etc/ansible/hosts to add your current server
+echo with the right group : [desktop] or [tinyserver]
+echo check ~/work/ansible/my_base/hosts.example
+echo
+echo Then run:
 echo "cd ~/work/ansible/my_base && sudo ansible-playbook site.yml"
