@@ -13,9 +13,9 @@ fi
 # Required package
 packages="git ansible"
 if [ -e /etc/debian-release ]; then
-   sudo apt update -y && apt install -y $packages
+   sudo apt update -y && sudo apt install -y $packages
 elif [ -e /etc/arch-release ]; then
-   sudo pacman -S --needed $packages
+   sudo pacman -Syu --needed $packages
 fi
 
 # Required ssh key
