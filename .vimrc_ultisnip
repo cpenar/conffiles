@@ -160,3 +160,5 @@ inoremap <Tab> <C-R>=CleverTab()<CR>
 " NERDTree-tabs shortcut toggle
 map <C-p> :NERDTreeTabsToggle<CR>
 
+" Add - (minus sign) a keyword
+set iskeyword+=-
