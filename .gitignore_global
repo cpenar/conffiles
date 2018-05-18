@@ -56,9 +56,6 @@ Thumbs.db
 ####################
 \#.*\#
 
-# gitignore itself #
-.gitignore
-
 # jekyll _site subdir #
 _site
 
