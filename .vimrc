@@ -23,7 +23,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'Yggdroot/indentLine'
 
 " JS better indent
-Plugin 'vim-scripts/JavaScript-Indent'
+"Plugin 'vim-scripts/JavaScript-Indent'
 
 " Typescript plugin
 Plugin 'leafgarland/typescript-vim'
@@ -56,7 +56,7 @@ Plugin 'w0rp/ale'
 "Plugin 'vim-syntastic/syntastic'
 
 " TSLint
-Plugin 'palantir/tslint'
+"Plugin 'palantir/tslint'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,8 +76,8 @@ if &term =~ "xterm\\|rxvt"
    " use an orange cursor in insert mode
    let &t_SI = "\<Esc>]12;orange\x7"
    " use a red cursor otherwise
-   let &t_EI = "\<Esc>]12;red\x7"
-   silent !echo -ne "\033]12;red\007"
+   let &t_EI = "\<Esc>]12;orange\x7"
+   silent !echo -ne "\033]12;orange\007"
    " reset cursor when vim exits
    autocmd VimLeave * silent !echo -ne "\033]112\007"
 endif
@@ -159,6 +159,22 @@ function! HLNext ()
    redraw
 endfunction
 
+" ########################
+" FROM help ins-completion
+" ########################
+
+function! CleverTab()
+   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+      return "\<Tab>"
+   else
+      return "\<C-N>"
+   endif
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>
+
+" NERDTree-tabs shortcut toggle
+map <C-p> :NERDTreeTabsToggle<CR>
+
 
 " ######
 " MY OWN
@@ -188,22 +204,5 @@ autocmd! bufwritepost .vimrc source %
 " use ( and ) to move threw entire sentence
 " zz to center vertically current line
 
-" ########################
-" FROM help ins-completion
-" ########################
-
-function! CleverTab()
-   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-      return "\<Tab>"
-   else
-      return "\<C-N>"
-   endif
-endfunction
-inoremap <Tab> <C-R>=CleverTab()<CR>
-
-" NERDTree-tabs shortcut toggle
-map <C-p> :NERDTreeTabsToggle<CR>
-
 " Add - (minus sign) a keyword
 set iskeyword+=-
-
