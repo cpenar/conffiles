@@ -25,30 +25,38 @@ Plugin 'Yggdroot/indentLine'
 " JS better indent
 Plugin 'vim-scripts/JavaScript-Indent'
 
+" Typescript plugin
+Plugin 'leafgarland/typescript-vim'
+
 " Autopairing
 Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'luochen1990/rainbow'
 
 " JS and React / JSX
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'mxw/vim-jsx'
 
-Plugin 'posva/vim-vue'
-
+" Nerdtree
 Plugin 'scrooloose/nerdtree'
 " NerdTree Tab plugin
 Plugin 'jistr/vim-nerdtree-tabs'
 
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 
+"Plugin 'plasticboy/vim-markdown'
 
-Plugin 'stephpy/vim-yaml'
+"Plugin 'stephpy/vim-yaml'
 
 
 " Asynchronous Lint Engine
 Plugin 'w0rp/ale'
+
+" Syntastic
+"Plugin 'vim-syntastic/syntastic'
+
+" TSLint
+Plugin 'palantir/tslint'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -198,3 +206,4 @@ map <C-p> :NERDTreeTabsToggle<CR>
 
 " Add - (minus sign) a keyword
 set iskeyword+=-
+
