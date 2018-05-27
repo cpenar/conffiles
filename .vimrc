@@ -206,3 +206,11 @@ autocmd! bufwritepost .vimrc source %
 
 " Add - (minus sign) a keyword
 set iskeyword+=-
+
+" ALE Standard
+let g:ale_linters = {
+         \   'javascript': ['standard'],
+         \}
+
+autocmd bufwritepost *.js silent !standard --fix %
+set autoread
