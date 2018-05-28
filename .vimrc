@@ -39,10 +39,6 @@ Plugin 'luochen1990/rainbow'
 
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
-" NerdTree Tab plugin
-Plugin 'jistr/vim-nerdtree-tabs'
-
-Plugin 'godlygeek/tabular'
 
 "Plugin 'plasticboy/vim-markdown'
 
@@ -172,9 +168,11 @@ function! CleverTab()
 endfunction
 inoremap <Tab> <C-R>=CleverTab()<CR>
 
-" NERDTree-tabs shortcut toggle
-map <C-p> :NERDTreeTabsToggle<CR>
+" NERDTree open in new tab
+map <C-p> :tabf .<CR>
 
+let NERDTreeQuitOnOpen=1
+let NERDTreeMapOpenInTab='\r'
 
 " ######
 " MY OWN
