@@ -174,6 +174,12 @@ map <C-p> :tabf .<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeMapOpenInTab='\r'
 
+" Start NERDTree when vim starts and no file specified3
+" from NERDTRee git README
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+
 " ######
 " MY OWN
 " ######
@@ -182,7 +188,9 @@ set nu
 
 map Q gq
 
-set tabstop=3 softtabstop=0 expandtab shiftwidth=3 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+autocmd FileType javascript,typescript :setlocal sw=2 ts=2 sts=2 
+
 " dont tab while pasting
 set nopaste
 " for the plaisure
@@ -210,5 +218,6 @@ let g:ale_linters = {
          \   'javascript': ['standard'],
          \}
 
-autocmd bufwritepost *.js silent !standard --fix %
+" Fix with standard when saving, or dont
+" autocmd bufwritepost *.js silent !standard --fix %
 set autoread
