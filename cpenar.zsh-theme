@@ -3,5 +3,5 @@ PROMPT='%{$reset_color%}%{$FG[227]%}@%m$(git_prompt_info) %{$fg[blue]%}%c${ret_s
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[000]%} "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%}λ"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}λ"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[197]%}λ"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[010]%}λ"
