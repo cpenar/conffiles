@@ -1,5 +1,4 @@
-" ######
-" Vundle
+" ###### " Vundle
 " ######
 
 set nocompatible
@@ -189,7 +188,7 @@ set nu
 map Q gq
 
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
-autocmd FileType javascript,typescript :setlocal sw=2 ts=2 sts=2 
+autocmd FileType javascript,typescript,json :setlocal sw=2 ts=2 sts=2 
 
 " dont tab while pasting
 set nopaste
@@ -213,10 +212,23 @@ autocmd! bufwritepost .vimrc source %
 " Add - (minus sign) a keyword
 set iskeyword+=-
 
-" ALE Standard
+" ALE linters
 let g:ale_linters = {
-         \   'javascript': ['standard'],
-         \}
+        \   'javascript': ['standard'],
+        \   'python': ['flake8'],
+        \}
+
+let g:ale_lint_on_save = 1
+let g:ale_lint_delay = 1000
+
+let g:ale_python_flake8_executable = 'python3'
+let g:ale_python_flake8_options = ' -m flake8 '
+
+let g:ale_python_pylint_executable = 'python3'
+let g:ale_python_pylint_options = ' -m pylint --disable=C '
+
+"let g:ale_lint_on_text_changed = 'save'
+"let g:ale_lint_on_enter = 0
 
 " Fix with standard when saving, or dont
 " autocmd bufwritepost *.js silent !standard --fix %

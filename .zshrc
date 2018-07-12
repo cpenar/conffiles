@@ -95,9 +95,6 @@ alias rctags='ctags -R --exclude=app.js --exclude=node_modules'
 alias doc='docker'
 alias e="xdg-open"
 
-# ajout path de pycharm
-export PATH="/home/cpenar/nosave/install/pycharm-community-2016.3/bin:$PATH"
-
 # Added by 
 # curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | zsh
 
