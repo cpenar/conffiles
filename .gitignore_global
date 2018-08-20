@@ -74,3 +74,11 @@ sequelize
 
 # Ansible .retry files
 *.retry
+
+# Emacs temp file
+\.#*
+
+# Angular-ide files
+.project
+.classpath
+.settings

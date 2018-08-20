@@ -105,3 +105,11 @@ export NVM_DIR="$HOME/.nvm"
 # Added for local gem install
 export GEM_HOME=$HOME/gems
 export PATH=$HOME/gems/bin:$PATH
+export CHROME_BIN=chromium-browser
+
+# tabtab source for jhipster package
+# uninstall by removing these lines or running `tabtab uninstall jhipster`
+[[ -f /home/cpenar/git/Zodiac-izos/Zodiac-izos/node_modules/tabtab/.completions/jhipster.zsh ]] && . /home/cpenar/git/Zodiac-izos/Zodiac-izos/node_modules/tabtab/.completions/jhipster.zsh
+
+# for karma launcher
+export CHROME_BIN=chromium-browser
