@@ -74,3 +74,6 @@ sequelize
 
 # Ansible .retry files
 *.retry
+
+# Intellij conf file
+.idea

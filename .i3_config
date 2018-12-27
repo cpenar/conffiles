@@ -154,7 +154,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command ~/i3memfree_percent
         status_command i3status
-		  mode hide
+		  mode dock
 }
 
 #bar {
@@ -176,7 +176,7 @@ client.focused_inactive   #333333 #222222 #888888 #292d2e
 #exec --no-startup-id i3-msg 'exec gnome-sound-applet'
 exec --no-startup-id i3-msg 'workspace 3; exec i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
-exec --no-startup-id i3-msg 'workspace 1; exec thunderbird'
+#exec --no-startup-id i3-msg 'workspace 1; exec thunderbird'
 exec --no-startup-id  xautolock -time 5 -locker 'i3lock -c 111111'
 
 bindsym Ctrl+Alt+l i3lock
